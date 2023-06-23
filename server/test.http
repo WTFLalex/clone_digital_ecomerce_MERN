@@ -1,9 +1,13 @@
 @url_dev=http://localhost:5000/
 
-## homepage
-GET http://localhost:5000/
+### homepage
+GET http://localhost:5000/test.txt
 
-## get api
+
+### about
+GET {{url_dev}}/about
+
+### get api
 
 ###
 POST {{url_dev}}/shop/signup
@@ -15,3 +19,17 @@ x-api-key: fsdfhskjfhwefjasdfaksdfjlasd
     "email": "shopminhhy@gmail.com",
     "password": "abc123"
 }
+
+
+###
+POST http://localhost:5000/v1/api/user/register
+Content-Type: application/json
+x-api-key: fsdfhskjfhwefjasdfaksdfjlasd
+
+{
+    "name": "Shop Minh Hy",
+    "email": "shopminhhy@gmail.com",
+    "password": "abc123",
+    "mobile": "012345678"
+}
+
